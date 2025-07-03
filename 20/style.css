@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #919191a1;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 48px;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 5rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.stars label:hover,
+.stars label:hover~label {
+    color: #f7b731;
+}
+
+.stars input:checked+label,
+.stars input:checked+label~label {
+    color: #f7b731;
+}
+
+#rating-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+    font-size: 38.4px;
+}
