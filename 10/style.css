@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #1a1a1a, #162b3e);
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 30px white;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.planet-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    animation: rotate 10s linear infinite;
+}
+
+.planet {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-5%, -5%);
+}
+
+.mercury {
+    width: 6px;
+    height: 6px;
+    background: gray;
+    animation-duration: 5s;
+}
+
+.venus {
+    width: 10px;
+    height: 10px;
+    background: #e0b084;
+    animation-duration: 7s;
+}
+
+.earth {
+    width: 12px;
+    height: 12px;
+    background: aqua;
+    animation-duration: 10s;
+}
+
+.mars {
+    width: 9px;
+    height: 9px;
+    background: #ff5e00;
+    animation-duration: 12s;
+}
+
+.jupiter {
+    width: 20px;
+    height: 20px;
+    background: #c2b280;
+    animation-duration: 18s;
+}
+
+.saturn {
+    width: 18px;
+    height: 18px;
+    background: #e0c068;
+    animation-duration: 22s;
+}
+
+.uranus {
+    width: 14px;
+    height: 14px;
+    background: #7fffd4;
+    animation-duration: 26s;
+}
+
+.neptune {
+    width: 14px;
+    height: 14px;
+    background: #4169e1;
+    animation-duration: 30s;
+}
+
+@keyframes rotate {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
